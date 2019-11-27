@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Raleway&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
+
+
+
+	<title>dz2</title>
+
+	<style type="text/css">
+
+
+	
+
+	#carouselMy{
+		width: 100%;
+	}
+
+	img{
+		width: 400px;
+		height: 300px;
+		position: relative;
+	}
+
+	.card-group{
+		width: 100%;
+		height: 300px;
+	}
+
+	#map{
+		width: 100%;
+		height: 500px;
+		display: none;
+
+	}
+
+		
+	
+
+</style>
+<script>
+
+	
+
+	function dispChange(){
+		var mapDisp = document.getElementById("map");
+		mapDisp.style.display = "block";
+	}
+		
+	function initMap(a, b){
+
+		var marP = {lat: a,lng: b};
+		var opt = {
+			center: {lat: a,lng: b},
+			zoom:8,
+		};
+		var map = new google.maps.Map(document.getElementById('map'),opt);
+
+		
+		var marker = new google.maps.Marker({
+			position:  marP,
+			map: map,
+		});
+	}
+</script>
+</head>
+<body>
+
+
+<!-- header
+
+ -->	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-info">
+					<a class="navbar-brand " href="#" class="glyphicon glyphicon-plane" class="fas fa-child" style="font-family: 'Crimson Text', serif;font-size: 25px ">
+						<i class="fas fa-ankh" style="color: yellow; font-size: 30px"></i>
+
+					Ru-Tu-Tu 
+					
+				</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav">
+							<li class="nav-item active">
+								<a class="nav-link" href="#" style="font-family: 'Crimson Text', serif;font-size: 20px ">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#" style="font-family: 'Crimson Text', serif;font-size: 20px ">Link</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="#" style="font-family: 'Crimson Text', serif;font-size: 20px "> Disabled</a>
+							</li>
+						</ul>
+						<form id="q" class="form-inline ml-auto">
+							<input class="form-control" type="search" placeholder="Search">
+							<button class="btn btn-outline-light" type="submit" style="font-family: 'Crimson Text', serif;font-size: 16px ">Search</button>
+						</form>
+					</div>
+				</nav>
+			</div>
+		</div>
+<h1 style=" padding-top: 70px; text-align: center;font-family: 'Crimson Text', serif;font-size: 50px ">Best hotels of Egypt</h1>
+<!-- 		carousel
+
+
+
+ -->		<div class="container-fluide">
+		<div class="row">
+			<div class="col-12">
+				<div id="carouselMy" class="carousel my-carousel  slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="d-block w-100" src=https://i.ytimg.com/vi/I-2t0TOnVpA/maxresdefault.jpg >
+							<div class="carousel-caption">
+								<h6>Slide 1</h6>
+								<p>Lorem ipsum dolor sit.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="https://i.ytimg.com/vi/tWDrru8_ux8/maxresdefault.jpg">
+							<div class="carousel-caption">
+								<h6>Slide 2</h6>
+								<p>Lorem ipsum dolor sit.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="https://media-cdn.holidaycheck.com/w_1280,h_720,c_fill,q_80/ugc/images/44955e14-9167-4ea9-adb1-237e6fdb37ca">
+							<div class="carousel-caption">
+								<h6>Slide 3</h6>
+								<p>Lorem ipsum dolor sit.</p>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselMy" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					</a>
+					<a class="carousel-control-next" href="#carouselMy" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					</a>
+					<ol class="carousel-indicators">
+						<li data-target="#carouselMy" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselMy" data-slide-to="1"></li>
+						<li data-target="#carouselMy" data-slide-to="2"></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<!-- Cards -->
+<div class="container-fluide">
+	<div class="row">
+ 		<div class="card-group">
+ 			<div class="col ">
+				<div class="card text-center ">
+					<div class="card-header">
+						<h5 class="card-title ">Hurgada</h5>
+					</div>
+					<div class="card-body">
+						<p class="card-text">opisanie</p>
+						<a onclick="initMap(27.424432, 33.670509); dispChange();" href="#karta" class="btn btn-primary">See on maps</a>
+					</div>
+					<div class="card-footer">
+						<h5 class="card-title">5 stars</h5>
+					</div>
+				</div>	
+			</div>
+			<div class="col">
+				<div class="card text-center">
+					<div class="card-header">
+						<h5 class="card-title">Sharmal-sheih</h5>
+					</div>
+					<div class="card-body">
+						<p class="card-text">opisanie</p>
+						<a onclick="initMap(27.982672, 34.423413); dispChange();" href="#karta" class="btn btn-primary">See on maps</a>
+					</div>
+					<div class="card-footer">
+						<h5 class="card-title">5 Stars</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card text-center">
+					<div class="card-header">
+						<h5 class="card-title">Sharmal-sheih</h5>
+					</div>
+					<div class="card-body">
+						<p class="card-text">opisanie</p>
+						<a  onclick="initMap(27.972000, 34.418812); dispChange();" href="#karta" class="btn btn-primary">See on map</a>
+					</div>
+					<div class="card-footer">
+						<h5 class="card-title">5 Stars</h5>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+ 		<div class="card-group">
+ 			<div class="col d-inline">
+				<div class="card text-center ">
+					<div class="card-header">
+						<h5 class="card-title">Hurgada</h5>
+					</div>
+					<div  class="card-body">
+						<p class="card-text"> Opisanie</p>
+						<a onclick="initMap(27.408885, 33.677416); dispChange();" id="btn4" href="#karta" class="btn btn-primary">See on map</a>
+					</div>
+					<div class="card-footer">
+						<h5 class="card-title">5 Stars</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card text-center">
+					<div class="card-header">
+						<h5 class="card-title">Sharmal-sheih</h5>
+					</div>
+					<div class="card-body">
+						<p class="card-text">opisanie</p>
+						<a onclick="initMap(27.982672, 34.423413); dispChange();" id="btn5" href="#karta" class="btn btn-primary">See on map</a>
+					</div>
+					<div class="card-footer">
+						<h5 class="card-title">5 Stars</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card text-center  ">
+					<div class="card-header ">
+						<h5 class="card-title">Kair</h5>
+					</div>
+					<div class="card-body ">opisanie</p>
+						<a onclick="initMap(30.045952, 31.226717
+); dispChange();" href="#karta" class="btn btn-primary">See on map</a>
+					</div>
+					<div class="card-footer ">
+						<h5 class="card-title">5 Stars</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a name="karta"></a>
+<div id="map"></div>
+
+
+<!-- fooer -->
+
+<footer class="footer-copyright text-center py-3 bg-info ">© homework</footer>
+	
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+	<script src="https://kit.fontawesome.com/7f9209be89.js" crossorigin="anonymous"></script>
+	 <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfQj-dxJ-6TmCwoQlxO3jLJPPdWN5AxJ8&callback=initMap">
+    </script>
+
+</body>
+</html>
